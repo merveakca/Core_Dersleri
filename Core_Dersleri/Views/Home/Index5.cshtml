@@ -1,0 +1,29 @@
+﻿@model List<Core_Dersleri.Models.Kitap>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index5</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <h4>Merhaba Kitap Sayfamıza Hoşgeldiniz</h4>
+  
+    <table class="table table-bordered">
+        @foreach (var k in Model)
+        {
+            <tr>
+                <td>@k.ID</td>
+                <td>@k.KitapAd</td>
+                <td>@k.Yazar</td>
+            </tr>
+        }
+    </table>
+    <button class="btn btn-warning">Tablo Lstesi</button>
+</body>
+</html>
